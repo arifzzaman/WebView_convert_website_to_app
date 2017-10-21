@@ -22,6 +22,18 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
 //        open every link in this app. dont go to the brower
 
-        webView.loadUrl("http://www.codefixit.com");
+        webView.loadUrl("http://www.diu.edu.bd");
+    }
+
+
+    /*going back to the previour page */
+
+    @Override
+    public void onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack();
+        }else{
+            super.onBackPressed();
+        }
     }
 }
